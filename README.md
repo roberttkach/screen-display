@@ -30,6 +30,8 @@ go install github.com/3d0c/gmfl@latest
 go install github.com/kbinani/screenshot@latest
 ```
 
+Вот исправленная версия README файла, включающая тесты для серверной и клиентской части:
+
 ## Setup
 
 ### Generating TLS Certificates
@@ -71,20 +73,24 @@ The client will connect to the server at `133.133.133.133:8000` (replace with th
 3. The client will capture your screen, encode it into an H.264 video stream, and send it to the server.
 4. The client will receive the encoded video stream from the server, decode it, and render it in a window.
 
-## CI/CD and Testing
+## Testing
 
-This project includes a continuous integration and delivery (CI/CD) pipeline for testing and maintaining the codebase. The `tests.go` file contains unit tests for various components of the library and the client application, including:
+This project includes unit tests for various components of the library and the client application. The `tests.go` file contains the following tests:
+
+### Server Tests
 
 - `TestFrameToImage`: Tests the conversion of an AVFrame to an image.
 - `TestHandleConnection`: Tests the handling of a client connection.
 - `TestCreateVideoDecoder`: Tests the creation of a video decoder context.
 - `TestEncodeVideo`: Tests the encoding of an image into a video frame.
+
+### Client Tests
+
 - `TestCaptureScreen`: Tests the screen capture functionality.
 - `TestCreateVideoDecoder`: Tests the creation of a video decoder.
 - `TestEncodeVideo`: Tests the encoding of a video frame.
 - `TestFrameToImage`: Tests the conversion of a video frame to an image.
 - `TestListenConnection`: Tests the listening for incoming video data.
-- `TestMain`: Tests the main function.
 - `TestRun`: Tests the main rendering loop.
 - `TestSendVideo`: Tests the sending of a video packet.
 
@@ -93,8 +99,6 @@ To run the tests, execute the following command:
 ```bash
 go test
 ```
-
-The CI/CD pipeline automatically runs these tests on every code change to ensure the stability and reliability of the library and the application.
 
 ## Contributing
 
