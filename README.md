@@ -94,12 +94,6 @@ This project includes unit tests for various components of the library and the c
 - `TestRun`: Tests the main rendering loop.
 - `TestSendVideo`: Tests the sending of a video packet.
 
-To run the tests, execute the following command:
-
-```bash
-go test
-```
-
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
