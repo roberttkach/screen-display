@@ -17,7 +17,7 @@ This repository contains a Go library for encoding and decoding video streams us
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/video-encoding-decoding.git
+git clone https://github.com/roberttkach/screen-display.git
 ```
 
 2. Install the required dependencies:
